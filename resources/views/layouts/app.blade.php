@@ -24,6 +24,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
+
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
@@ -74,6 +75,9 @@
                     </ul>
                 </div>
             </div>
+            <a class="navbar-brand" href="#">
+                <img src="C:\Users\Edwing\Downloads\umg.svg" alt="" width="30" height="24">
+            </a>
         </nav>
 
         <main class="py-4">

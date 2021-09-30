@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header">{{ __('Register Student') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -19,6 +19,34 @@
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row mt-3">
+                            <label for="surnames" class="col-md-4 col-form-label text-md-right">{{ __('Surnames') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="surnames" type="text" class="form-control @error('surnames') is-invalid @enderror" name="surnames" value="{{ old('surnames') }}" required autocomplete="name" autofocus>
+
+                                @error('surname')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row mt-3">
+                            <label for="carnet" class="col-md-4 col-form-label text-md-right">{{ __('Student Card') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="carnet" type="text" class="form-control @error('carnet') is-invalid @enderror" name="carnet" value="{{ old('carnet') }}" required autocomplete="carnet">
+
+                                @error('carnet')
+                                <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -53,7 +81,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="form-group row mt-3">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
                             <div class="col-md-6">
@@ -61,10 +89,10 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
+                        <div class="form-group row mb-0 mt-2">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                    {{ __('Registrar') }}
                                 </button>
                             </div>
                         </div>
